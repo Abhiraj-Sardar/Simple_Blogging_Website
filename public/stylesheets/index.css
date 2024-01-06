@@ -1,0 +1,94 @@
+body {
+    background-image: linear-gradient(to bottom right, #ffcccc, #cc99ff);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+}
+nav {
+    float: left;
+    padding: 10px;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+}
+div h1 {
+    color: #333;
+    font-size: 48px;
+    margin-top: 100px;
+    text-align: center;
+    text-shadow: 2px 2px #ccc;
+}
+
+div .btn{
+    padding:20px 40px;
+    font-weight: 400;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+div .btn:hover{
+    background-color:rgba(244, 214, 21, 0.644);
+    color: black;
+    border:2px dotted red;
+}
+
+.all-articles{
+    height:auto;
+    word-wrap:break-word;
+    /* overflow: hidden; */
+}
+
+form {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+label {
+    display: block;
+    font-size: 20px;
+    margin-top: 20px;
+}
+input[type=text], textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+}
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #45a049;
+}
