@@ -33,6 +33,45 @@ app.post("/article",async(req,res)=>{
     res.redirect("/");
 })
 
+app.get("/edit/:id",async(req,res)=>{
+    const id = req.params.id;
+    const article = await Article.findById({_id:id});
+    if(article==null){
+        res.redirect("/");
+    }else{
+        res.render("edit",{
+            article:article
+        })
+    }
+})
+
+app.post("/update/:id",async(req,res)=>{
+    const {id} =req.params;
+    const {title,post1,info}=req.body;
+    const updateArticle = await Article.findByIdAndUpdate({_id:id},{title,post1,info},{new:true});
+    res.redirect("/");
+})
+
+app.get("/read/:id",async(req,res)=>{
+    const id = req.params.id;
+    const articleData = await Article.findById({_id:id});
+    if(articleData==null)
+    {
+        res.redirect("/");
+    }
+    else{
+        res.render("read",{
+            article:articleData
+        })
+    }
+})
+
+app.get("/delete/:id",async(req,res)=>{
+    const id = req.params.id;
+    const deleteArticle = await Article.findByIdAndDelete({_id:id});
+    res.redirect("/");
+})
+
 app.listen(3000,()=>{
     console.log("Application running on port 3000");
 })

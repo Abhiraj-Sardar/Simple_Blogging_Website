@@ -1,6 +1,11 @@
+*{
+    margin:0;
+    padding:0;
+    border:none;
+}
 body {
     background-image: linear-gradient(to bottom right, #ffcccc, #cc99ff);
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     background-size: cover;
     height: 100vh;
 }
@@ -8,10 +13,11 @@ header {
     background-color: #333;
     color: white;
     padding: 10px;
-    position: fixed;
+    position: relative;
     top: 0;
     left:0;
     width: 100%;
+    height:4pc;;
 }
 nav {
     float: left;
@@ -54,7 +60,25 @@ div .btn:hover{
 .all-articles{
     height:auto;
     word-wrap:break-word;
+    margin-top: 20px;
+    /* overflow: hidden; */    
+}
+
+.all-articles .row .card{
+    height:20rem;
+    width:17.5rem;
+    text-align: justify;
+    margin: 12px;
     /* overflow: hidden; */
+}
+
+.all-articles .row .card .btns{
+    display:flex;
+    gap:10px;
+}
+
+.all-articles .row .card .btns .btn{
+padding:10px 18px;
 }
 
 form {
@@ -91,4 +115,10 @@ input[type=submit] {
 }
 input[type=submit]:hover {
     background-color: #45a049;
+}
+
+/* read.ejs */
+.read-template{
+    height:100vh;
+    width:100px;
 }
